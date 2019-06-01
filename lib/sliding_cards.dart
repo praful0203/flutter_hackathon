@@ -44,29 +44,26 @@ class _SlidingCardsViewState extends State<SlidingCardsView> {
           SlidingCard(
             name: 'Flutter Gram',
             date: 'A working Instagram clone using Firebase & Firestore',
-            assetName:
-                'https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwix0ejnh8jiAhWA_XMBHbVHAQcQjRx6BAgBEAU&url=http%3A%2F%2Fparanoidandroid.co%2Fwallpapers&psig=AOvVaw15PLTLJ48PYyU5SE_bXdjL&ust=1559470854321231',
+            assetName: 'steve-johnson.jpeg',
             offset: pageOffset,
           ),
           SlidingCard(
             name: 'Wavy Metrics',
             date:
                 'Wavy Metrics is an easy and quick way for Wavers to keep up with company results.',
-            assetName:
-                'https://www.google.com/url?sa=i&source=imgres&cd=&cad=rja&uact=8&ved=2ahUKEwjylcXlh8jiAhW77HMBHZU2AmwQjRx6BAgBEAU&url=https%3A%2F%2Funsplash.com%2Fphotos%2FSewc0TdvV-o&psig=AOvVaw32Xa1YEyV3782jjnHT-CVD&ust=1559470857548190',
+            assetName: 'rodion-kutsaev.jpeg',
             offset: pageOffset,
           ),
           SlidingCard(
             name: 'Flutter Jobs',
             date: "flutter job board app for Android/IOS using",
-            assetName:
-                'https://images.pexels.com/photos/1212487/pexels-photo-1212487.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+            assetName: 'steve-johnson.jpeg',
             offset: pageOffset,
           ),
           SlidingCard(
             name: 'E-commerce suit in Flutter',
             date: 'An e-commerce suit built in Flutter for android and iOS',
-            assetName: 'https://itsallwidgets.com/screenshots/app-134.png',
+            assetName: 'steve-johnson.jpeg',
             offset: pageOffset,
           ),
         ],
@@ -102,7 +99,7 @@ class SlidingCard extends StatelessWidget {
           children: <Widget>[
             ClipRRect(
               borderRadius: BorderRadius.vertical(top: Radius.circular(32)),
-              child: Image.network(
+              child: Image.asset(
                 assetName,
                 height: MediaQuery.of(context).size.height * 0.2,
                 alignment: Alignment(-offset.abs(), 0),

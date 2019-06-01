@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hackathon/home_page.dart';
+
+import 'home_page.dart';
 
 void main() => runApp(new MyApp());
 
@@ -8,8 +9,18 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(fontFamily: 'SF Pro Display'),
-      title: 'Flutter Gallery',
-      home: HomePage(),
+      title: 'Buy Tickets',
+      home: HomeWrapper(),
+      debugShowCheckedModeBanner: false,
+    );
+  }
+}
+
+class HomeWrapper extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: HomePage(),
     );
   }
 }

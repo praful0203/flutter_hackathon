@@ -3,7 +3,13 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
-import 'constants.dart';
+const double minHeight = 120;
+const double iconStartSize = 44;
+const double iconEndSize = 120;
+const double iconStartMarginTop = 36;
+const double iconEndMarginTop = 80;
+const double iconsVerticalSpacing = 24;
+const double iconsHorizontalSpacing = 16;
 
 class ExhibitionBottomSheet extends StatefulWidget {
   @override
@@ -72,7 +78,7 @@ class _ExhibitionBottomSheetState extends State<ExhibitionBottomSheet>
             child: Container(
               padding: const EdgeInsets.symmetric(horizontal: 32),
               decoration: const BoxDecoration(
-                color: Color(0xFF162A49),
+                color: Colors.purple,
                 borderRadius: BorderRadius.vertical(top: Radius.circular(32)),
               ),
               child: Stack(
@@ -194,42 +200,24 @@ class ExpandedEventItem extends StatelessWidget {
   }
 
   Widget _buildContent() {
-    return Column(
-      children: <Widget>[
-        Text(title, style: TextStyle(fontSize: 16)),
-        SizedBox(height: 8),
-        Row(
-          children: <Widget>[
-            Text(
-              '1 ticket',
-              style: TextStyle(
-                fontWeight: FontWeight.w500,
-                fontSize: 12,
-                color: Colors.grey.shade600,
-              ),
-            ),
-            SizedBox(width: 8),
-            Text(
-              date,
-              style: TextStyle(
-                fontWeight: FontWeight.w300,
-                fontSize: 12,
-                color: Colors.grey,
-              ),
-            ),
-          ],
-        ),
-        Spacer(),
-        Row(
-          children: <Widget>[
-            Icon(Icons.place, color: Colors.grey.shade400, size: 16),
-            Text(
-              'Science Park 10 25A',
+    return Padding(
+      padding: const EdgeInsets.only(top: 8.0, right: 8.0, bottom: 8.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text("Flutter showcase", style: TextStyle(fontSize: 16)),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 8.0, right: 8.0),
+            child: Text(
+              'It all about flutter widget',
               style: TextStyle(color: Colors.grey.shade400, fontSize: 13),
-            )
-          ],
-        )
-      ],
+            ),
+          )
+        ],
+      ),
     );
   }
 }
@@ -261,7 +249,7 @@ class SheetHeader extends StatelessWidget {
     return Positioned(
       top: topMargin,
       child: Text(
-        'Starred Apps',
+        'Bookmark List',
         style: TextStyle(
           color: Colors.white,
           fontSize: fontSize,
